@@ -1,0 +1,298 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Icon classes for Font Awesome */
+.icon-car:before {
+  content: "\f1b9";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-user:before {
+  content: "\f007";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-book:before {
+  content: "\f02d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-practice:before {
+  content: "\f044";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-exam:before {
+  content: "\f017";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-support:before {
+  content: "\f086";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-calendar:before {
+  content: "\f133";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-update:before {
+  content: "\f044";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-tips:before {
+  content: "\f0eb";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-facebook:before {
+  content: "\f39e";
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.icon-youtube:before {
+  content: "\f167";
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.icon-instagram:before {
+  content: "\f16d";
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.icon-tiktok:before {
+  content: "\e07b";
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.icon-location:before {
+  content: "\f3c5";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-phone:before {
+  content: "\f095";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-email:before {
+  content: "\f0e0";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-apple:before {
+  content: "\f179";
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.icon-android:before {
+  content: "\f17b";
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.icon-prev:before {
+  content: "\f053";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-next:before {
+  content: "\f054";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-check:before {
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-x:before {
+  content: "\f00d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-warning:before {
+  content: "\f071";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-clock:before {
+  content: "\f017";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.icon-home:before {
+  content: "\f015";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.pagination-scroll {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 10px;
+  gap: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  scroll-behavior: smooth;
+}
+
+/* Optional: improve touch scrolling on mobile */
+.pagination-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.pagination-scroll::-webkit-scrollbar-thumb {
+  background: #999;
+  border-radius: 3px;
+}
+
+.question-number {
+  min-width: 40px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.question-number.current {
+  background-color: #1976d2;
+  color: white;
+}
+
+.question-number.unanswered {
+  background-color: #fdd835;
+  color: #000;
+}
+
+.question-number.correct {
+  background-color: #4caf50;
+  color: white;
+}
+
+.question-number.incorrect {
+  background-color: #f44336;
+  color: white;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: background-color 0.3s ease, transform 0.25s ease,
+    box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.option:hover {
+  background-color: #eef6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.option.selected {
+  border-color: #1976d2;
+  background-color: #e3f2fd;
+  box-shadow: 0 4px 10px rgba(25, 118, 210, 0.2);
+  transform: translateY(-1px);
+}
+
+.option-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #1976d2;
+  border-radius: 50%;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease;
+}
+
+.option-radio-fill {
+  width: 10px;
+  height: 10px;
+  background-color: #1976d2;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+}
+
+@media (max-width: 600px) {
+  .instruction-text {
+    display: none;
+  }
+
+  .button {
+    display: inline-block !important;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+
+  .button.outline {
+    background-color: transparent;
+    border: 1px solid #3498db;
+    color: #3498db;
+  }
+  .navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+}
