@@ -268,7 +268,7 @@ function PracticePage() {
       </div>
       <div className="question-footer">
         {selectedAnswers[currentQuestion] !== -1 && (
-          <button className="button outline full-width" onClick={toggleExplanation}>
+          <button className="button full-width" onClick={toggleExplanation}>
             {showExplanation ? "Ẩn giải thích" : "Xem giải thích"}
           </button>
         )}

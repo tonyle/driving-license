@@ -295,4 +295,7 @@ code {
     display: flex;
     justify-content: space-between;
   }
+  .page-title {
+    display: none;
+  }
 }

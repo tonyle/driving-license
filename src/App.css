@@ -14,7 +14,7 @@ body {
 
 /* Main Content */
 .main-content {
-  min-height: calc(100vh - 80px); /* Adjust based on header and footer height */
+  /* min-height: calc(100vh - 80px);  */
   padding-top: 30px;
   padding-bottom: 60px;
 }
@@ -795,4 +795,7 @@ body {
   height: auto;
   border-radius: 8px;
   margin-bottom: 20px;
+}
+.with-min-height {
+  min-height: calc(100vh - 80px);
 }
