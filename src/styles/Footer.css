@@ -175,4 +175,13 @@
   .app-buttons {
     flex-direction: column;
   }
+
+  .question-footer {
+    padding: 20px;
+    border-top: 1px solid #f1f1f1;
+    position: fixed;
+    bottom: -17px;
+    width: 100%;
+    right: 5px;
+  }
 }

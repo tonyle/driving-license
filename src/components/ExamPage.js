@@ -245,7 +245,7 @@ function ExamPage() {
               <button className="button" onClick={handlePreviousQuestion} disabled={currentQuestion === 0}>
                 Câu trước
               </button>
-              <p className="instruction-text">Bạn có thể sử dụng mũi tên ⬅️ hoặc ➡️ trên bàn phím để thay đổi câu hỏi</p>
+              <p className="instruction-text">Bạn có thể sử dụng mũi tên ⬅️ hoặc ➡️ và số từ 1 đến 4 trên bàn phím để chọn hoặc thay đổi câu hỏi</p>
               {currentQuestion === examQuestions.length - 1 ? (
                 <button className="button success" onClick={() => setShowConfirmFinish(true)}>
                   Nộp bài
