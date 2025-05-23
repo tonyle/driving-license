@@ -140,6 +140,14 @@ function ExamPage() {
       } else if (event.key === "ArrowLeft") {
         handlePreviousQuestion();
       }
+      else if (event.key >= 1 && event.key <= 4) {
+        const answerIndex = parseInt(event.key) - 1;
+        handleAnswerSelect(answerIndex);
+      }
+      //enter key to submit
+      else if (event.key === "Enter") {
+        setShowConfirmFinish(true);
+      }
     };
 
     window.addEventListener("keydown", handleKeyDown);
@@ -206,23 +214,6 @@ function ExamPage() {
       )}
       {!showResults ? (
         <div className="question-card">
-          <div className="question-footer">
-            <div className="navigation-buttons">
-              <button className="button" onClick={handlePreviousQuestion} disabled={currentQuestion === 0}>
-                Câu trước
-              </button>
-              <p className="instruction-text">Bạn có thể sử dụng mũi tên ⬅️ hoặc ➡️ trên bàn phím để thay đổi câu hỏi</p>
-              {currentQuestion === examQuestions.length - 1 ? (
-                <button className="button success" onClick={() => setShowConfirmFinish(true)}>
-                  Nộp bài
-                </button>
-              ) : (
-                <button className="button" onClick={handleNextQuestion}>
-                  Câu tiếp
-                </button>
-              )}
-            </div>
-          </div>
           <div className="question-header">
             <h2>Câu hỏi {currentQuestion + 1}</h2>
             <p>{examQuestions[currentQuestion].question}</p>
@@ -247,6 +238,23 @@ function ExamPage() {
                   <label>{option}</label>
                 </div>
               ))}
+            </div>
+          </div>
+          <div className="question-footer">
+            <div className="navigation-buttons">
+              <button className="button" onClick={handlePreviousQuestion} disabled={currentQuestion === 0}>
+                Câu trước
+              </button>
+              <p className="instruction-text">Bạn có thể sử dụng mũi tên ⬅️ hoặc ➡️ trên bàn phím để thay đổi câu hỏi</p>
+              {currentQuestion === examQuestions.length - 1 ? (
+                <button className="button success" onClick={() => setShowConfirmFinish(true)}>
+                  Nộp bài
+                </button>
+              ) : (
+                <button className="button" onClick={handleNextQuestion}>
+                  Câu tiếp
+                </button>
+              )}
             </div>
           </div>
         </div>

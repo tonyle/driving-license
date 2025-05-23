@@ -144,23 +144,44 @@
     display: none;
   }
 
+  .mobile-menu-open .main-nav {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .mobile-menu-open .main-nav ul {
+    flex-direction: column;
+  }
+
+  .mobile-menu-open .main-nav li {
+    border-bottom: 1px solid #f1f1f1;
+  }
+
+  .mobile-menu-open .main-nav li a {
+    padding: 15px 20px;
+  }
+
   .mobile-menu-toggle {
     display: flex;
   }
 
-  .login-button span {
-    display: none;
+  .mobile-menu-open .mobile-menu-toggle span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
   }
 
-  .login-button {
-    padding: 8px;
+  .mobile-menu-open .mobile-menu-toggle span:nth-child(2) {
+    opacity: 0;
   }
 
-  .logo-subtitle {
-    display: none;
+  .mobile-menu-open .mobile-menu-toggle span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
   }
 }
-
 /* For mobile menu functionality, you would need JavaScript to toggle a class */
 .mobile-menu-open .mobile-menu-toggle span:nth-child(1) {
   transform: translateY(9px) rotate(45deg);
