@@ -6,11 +6,13 @@ import LearningPage from "./components/LearningPage"
 import PracticePage from "./components/PracticePage"
 import ExamPage from "./components/ExamPage"
 import Layout from "./components/Layout"
+import ScrollToTop from "./components/ScrollToTop"
 import "./App.css"
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
