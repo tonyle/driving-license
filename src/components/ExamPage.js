@@ -66,24 +66,28 @@ function ExamPage() {
   const [showResults, setShowResults] = useState(false)
   const [showConfirmFinish, setShowConfirmFinish] = useState(false)
   const [showTimeoutDialog, setShowTimeoutDialog] = useState(false)
+  const [isStart, setIsStart] = useState(false)
 
   useEffect(() => {
     if (isExamFinished) return
 
-    const timer = setInterval(() => {
-      setTimeLeft((prevTime) => {
-        if (prevTime <= 1) {
-          clearInterval(timer)
-          setIsExamFinished(true)
-          setShowTimeoutDialog(true)
-          return 0
-        }
-        return prevTime - 1
-      })
-    }, 1000)
+    if (isStart) {
+      const timer = setInterval(() => {
+        setTimeLeft((prevTime) => {
+          if (prevTime <= 1) {
+            clearInterval(timer)
+            setIsExamFinished(true)
+            setShowTimeoutDialog(true)
+            return 0
+          }
+          return prevTime - 1
+        })
+      }, 1000)
 
-    return () => clearInterval(timer)
-  }, [isExamFinished])
+      return () => clearInterval(timer)
+    }
+    
+  }, [isExamFinished, isStart])
 
   const handleAnswerSelect = (answerIndex) => {
     if (isExamFinished) return
@@ -161,6 +165,21 @@ function ExamPage() {
 
   if (examQuestions.length === 0) {
     return <div className="loading">Đang tải đề thi...</div>;
+  }
+  if (isStart === false) {
+    return (
+       <div className="container">
+        <div className="page-title1">
+          <h2>Chào mừng bạn đến với bài thi thử</h2>
+          <p>Đề thi bao gồm {examQuestions.length} câu hỏi trắc nghiệm.</p>
+          <p>Thời gian làm bài là 20 phút.</p>
+          <p>Nhấn nút "Bắt đầu" để bắt đầu bài thi.</p>
+          <button className="button" onClick={() => {setIsStart(true); setTimeLeft(20 * 60);}}>
+            Bắt đầu
+          </button>
+        </div>
+      </div>
+    )
   }
   return (
     <div className="container">
