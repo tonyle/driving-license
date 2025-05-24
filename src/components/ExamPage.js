@@ -163,6 +163,16 @@ function ExamPage() {
   const progress = ((currentQuestion + 1) / examQuestions.length) * 100
   const answeredCount = selectedAnswers.filter((answer) => answer !== -1).length
 
+  const handleStart = () => {
+    setIsStart(true)
+    setTimeLeft(20 * 60)
+
+    const container = document.querySelector(".container")
+    if (container.requestFullscreen) {
+      container.requestFullscreen()
+    }
+  }
+
   if (examQuestions.length === 0) {
     return <div className="loading">Đang tải đề thi...</div>;
   }
@@ -174,7 +184,7 @@ function ExamPage() {
           <p>Đề thi bao gồm {examQuestions.length} câu hỏi trắc nghiệm.</p>
           <p>Thời gian làm bài là 20 phút.</p>
           <p>Nhấn nút "Bắt đầu" để bắt đầu bài thi.</p>
-          <button className="button" onClick={() => {setIsStart(true); setTimeLeft(20 * 60);}}>
+          <button className="button" onClick={handleStart}>
             Bắt đầu
           </button>
         </div>
