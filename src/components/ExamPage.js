@@ -167,10 +167,10 @@ function ExamPage() {
     setIsStart(true)
     setTimeLeft(20 * 60)
 
-    const container = document.querySelector(".container")
-    if (container.requestFullscreen) {
-      container.requestFullscreen()
-    }
+    // const container = document.querySelector(".container")
+    // if (container.requestFullscreen) {
+    //   container.requestFullscreen()
+    // }
   }
 
   if (examQuestions.length === 0) {

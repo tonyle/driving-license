@@ -47,13 +47,13 @@ function Footer() {
           </div> */}
           
           <div className="footer-section">
-            <h3>Liên hệ</h3>
+            {/* <h3>Liên hệ</h3>
             <div className="contact-info">
               <div className="contact-item">
                 <i className="icon-email"></i>
                 <span>info@drivetest.vn</span>
               </div>
-            </div>
+            </div> */}
             <div className="app-download">
               <h4>Tải ứng dụng</h4>
               <div className="app-buttons">

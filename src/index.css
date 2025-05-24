@@ -299,12 +299,7 @@ code {
     display: none;
   }
 }
-.icon-car,
-.icon-next,
-.icon-prev,
-.icon-check,
-.icon-x,
-.icon-warning,
-.icon-clock {
+[class^="icon-"],
+[class*=" icon-"] {
   font-style: normal !important;
 }
