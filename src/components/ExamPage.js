@@ -185,14 +185,14 @@ function ExamPage() {
     <div className="container">
       <div className="page-title">
         <h1>Thi thử bằng lái xe</h1>
-        <div className="exam-info">
+      </div>
+      <div className="exam-info">
           <p>Mô phỏng đề thi thật với thời gian giới hạn</p>
           <div className="timer">
             <i className="icon-clock"></i>
             <span>{formatTime(timeLeft)}</span>
           </div>
         </div>
-      </div>
 
       <div className="progress-container">
         <div className="progress-info">
